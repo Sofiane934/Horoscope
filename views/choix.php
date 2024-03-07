@@ -6,13 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <a href="index.php?action=modifier">Administrer</a>
     <form action="index.php?action=reponse" method="post">
         <select name="horoscope" size="1">
             <?php foreach($signe as $cle => $valeur):?>
                 <option value="<?= $cle ?>"> <?= $cle ?> </option>
             <?php endforeach ?>
         </select>
-    <input type="submit" value="Envoyer">
+        
+        <input type="submit" value="Envoyer">
     </form>
 </body>
 </html>
