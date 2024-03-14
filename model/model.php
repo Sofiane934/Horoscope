@@ -6,6 +6,9 @@ function getlesSignes(){
   return $sign;
 }
 
+
+  
+
 function getconnexion($login , $mdp) {
     $connexion = connexion();
 
@@ -14,4 +17,8 @@ function getconnexion($login , $mdp) {
             if(isset($v[$login]) && $mdp==$v[$login]) $flag=true;
       }
     return $flag;
+}
+function getleSigne($choix){
+  $sign= signe();
+  return $sign[$choix];
 }

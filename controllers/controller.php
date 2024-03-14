@@ -4,8 +4,9 @@ switch($action)
   
   case'reponse':
     {
-       //var_dump($_REQUEST);
-        $key=$_REQUEST["horoscope"];
+        //var_dump($_REQUEST);
+        $choix=$_REQUEST["horoscope"];
+        $signe = getleSigne($choix);
         include 'views/reponse.php';
         break;
     }
@@ -14,9 +15,12 @@ switch($action)
     {
       $login=$_REQUEST['login'];
       $mdp=$_REQUEST['mdp'];
+
       $flag=getconnexion($login,$mdp);
+
       if($flag){
-        include 'views/choix.php';
+      $signe=getlesSignes();
+      include 'views/choix.php';
       }
       else{
         include 'views/connexion.php';
@@ -43,6 +47,4 @@ switch($action)
       include 'views/connexion.php';
     }  
 }
-?>
 
-    
