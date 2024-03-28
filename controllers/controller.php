@@ -13,10 +13,11 @@ switch($action)
 
   case 'connexion':
     {
+
       $login=$_REQUEST['login'];
       $mdp=$_REQUEST['mdp'];
 
-      $flag=getconnexion($login,$mdp);
+      $flag=getconexion($login,$mdp);
 
       if($flag){
       $signe=getlesSignes();

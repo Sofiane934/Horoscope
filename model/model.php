@@ -6,9 +6,6 @@ function getlesSignes(){
   return $sign;
 }
 
-
-  
-
 function getconnexion($login , $mdp) {
     $connexion = connexion();
 
